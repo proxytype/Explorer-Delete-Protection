@@ -55,7 +55,7 @@ BOOL isProtected(LPCWSTR lpFileName) {
     size_t found = f.find(L"protected");
 
     if (found != string::npos) {
-        OutputDebugString(L"_DeleteFileW Detectd Protected Folder Requested!");
+        OutputDebugString(L"Detectd Protected Folder Requested!");
 
         return TRUE;
     }
