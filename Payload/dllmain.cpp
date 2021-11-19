@@ -28,20 +28,6 @@ typedef BOOL (WINAPI* realDeleteFileW)(
     LPCWSTR lpFileName
 );
 
-typedef NTSTATUS(WINAPI* realNtCreateFile)(
-   PHANDLE             FileHandle,
-   ACCESS_MASK          DesiredAccess,
-   POBJECT_ATTRIBUTES   ObjectAttributes,
-   PIO_STATUS_BLOCK    IoStatusBlock,
-   PLARGE_INTEGER       AllocationSize OPTIONAL,
-   ULONG                FileAttributes,
-   ULONG                ShareAccess,
-   ULONG                CreateDisposition,
-   ULONG                CreateOptions,
-   PVOID                EaBuffer OPTIONAL,
-   ULONG                EaLength
-);
-
 typedef NTSTATUS (WINAPI*  realNtOpenFile)(
      PHANDLE            FileHandle,
      ACCESS_MASK        DesiredAccess,
@@ -81,7 +67,8 @@ BOOL isProtected(LPCWSTR lpFileName) {
 
 BOOL _DeleteFileW(
     LPCWSTR lpFileName
-) {
+) 
+{
 
     if (isProtected(lpFileName)) {
         OutputDebugString(L"_DeleteFileW(...) Folder Requested!");
@@ -124,7 +111,8 @@ BOOL _MoveFileExW(
     LPCWSTR lpExistingFileName,
     LPCWSTR lpNewFileName,
     DWORD   dwFlags
-) {
+) 
+{
 
     if (isProtected(lpExistingFileName)) {
         OutputDebugString(L"_MoveFileExW(...) Move Requested!");
