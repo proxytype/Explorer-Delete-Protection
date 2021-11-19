@@ -1,5 +1,5 @@
 # Explorer-Delete-Protection
-Protect files under a specific folder from deleting or moving by the user using explorer.exe.
+Protect files under a specific folder from deleting or moving by explorer.exe.
 
 ![alt text](https://raw.githubusercontent.com/proxytype/Explorer-Delete-Protection/main/explorer-delete-protection.gif)
 
