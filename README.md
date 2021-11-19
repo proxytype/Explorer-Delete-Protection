@@ -13,6 +13,6 @@ Microsoft Detours Library - https://github.com/microsoft/Detours
 Add detours.lib to Linker additional libraries.
 
 **Hooked Functions:**
-- DeleteFileW <br>
-- NtOpenFile <br>
-- MoveFileExW <br>
+- DeleteFileW (kernelbase.dll)<br>
+- MoveFileExW (kernelbase.dll)<br>
+- NtOpenFile (ntdll.dll)<br>
