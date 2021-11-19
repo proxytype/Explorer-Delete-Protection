@@ -1,6 +1,8 @@
 # Explorer-Delete-Protection
 Protect files under a specific folder from delete or move by the user using explorer.exe.
 
+![alt text](https://raw.githubusercontent.com/proxytype/Explorer-Delete-Protection/main/explorer-delete-protection.gif)
+
 ## Requierments:
 Microsoft Detours Library - https://github.com/microsoft/Detours
 
